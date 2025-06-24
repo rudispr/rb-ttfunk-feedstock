@@ -1,5 +1,5 @@
 {% set name = "ttfunk" %}
-{% set version = "1.8.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-    sha256: a7cbc7e489cc46e979dde04d34b5b9e4f5c8f1ee5fc6b1a7be39b829919d20ca
+    sha256: 2370ba484b1891c70bdcafd3448cfd82a32dd794802d81d720a64c15d3ef2a96
 
 build:
   noarch: generic
@@ -21,7 +21,6 @@ requirements:
     - ruby
   run:
     - {{ pin_compatible('ruby', max_pin='x.x') }}
-    - rb-bigdecimal ~=3.1
 
 test:
   commands:
@@ -43,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - jdmarques
+    - rudispr
